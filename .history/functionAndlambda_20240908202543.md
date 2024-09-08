@@ -271,13 +271,3 @@ times 参数是操作应发生的次数。action 参数是一个函数，它接�
 
 ![alt text](image-14.png)
 
-在 main() 函数中，在对 treatFunction() 和 trickFunction() 的调用之间调用 repeat() 函数。为 times 参数传入 4，并为 action 函数使用尾随 lambda 语法。您无需为 lambda 表达式的 Int 参数提供名称。将对 treatFunction() 函数的调用移到 repeat() 函数的 lambda 表达式中。
-
-    fun main() {
-        val treatFunction = trickOrTreat(false) { "$it quarters" }
-        val trickFunction = trickOrTreat(true, null)
-        repeat(4) {
-            treatFunction()
-        }
-        trickFunction()
-    }
